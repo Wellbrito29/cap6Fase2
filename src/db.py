@@ -29,3 +29,37 @@ def criar_tabela(conn):
             print("A tabela 'dados_climaticos' já existe.")
     except Exception as e:
         print("Erro ao criar tabela:", e)
+
+
+def inserir_dados(conn, data_hora, temperatura, precipitacao):
+    try:
+        cursor = conn.cursor()
+        cursor.execute(
+            """
+            INSERT INTO dados_climaticos (data_hora, temperatura, precipitacao)
+            VALUES (:1, :2, :3)
+        """,
+            (data_hora, temperatura, precipitacao),
+        )
+        conn.commit()
+        print("Dados inseridos com sucesso!")
+    except Exception as e:
+        print("Erro ao inserir dados:", e)
+
+
+def consultar_dados(conn):
+    try:
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM dados_climaticos")
+        dados = cursor.fetchall()
+
+        # Exibindo os dados de forma organizada
+        print("Dados Climáticos:")
+        for row in dados:
+            print(
+                f"ID: {row[0]}, Data/Hora: {row[1]}, Temperatura: {row[2]}, Precipitação: {row[3]}"
+            )
+    except Exception as e:
+        print("Erro ao consultar dados:", e)
+    finally:
+        cursor.close()
