@@ -26,7 +26,27 @@
 
 ## 📜 Descrição
 
-*Descreva seu projeto com base no texto do PBL (até 600 palavras)*
+A solução visa prever a produtividade das safras agrícolas com base em fatores climáticos e dados históricos, auxiliando agricultores e gestores a tomarem decisões mais informadas. O desafio é combinar dados climáticos (chuva, temperatura, umidade) com dados históricos de produção para gerar previsões de safra em diferentes regiões.
+
+## 2. Como a Solução Vai Resolver o Problema?
+
+A aplicação será dividida nas seguintes etapas:
+
+### a) Coleta de Dados Climáticos em Tempo Real
+
+A solução irá coletar dados climáticos (chuva, temperatura, umidade, etc.) de APIs públicas como Open Meteo, ou usando dados meteorológicos disponíveis no banco de dados.
+
+### b) Armazenamento e Consulta de Dados Históricos
+
+Dados históricos de produtividade agrícola (safras passadas) serão armazenados em um banco de dados Oracle. A solução permitirá a consulta e atualização desses dados para manter o histórico atualizado.
+
+### c) Análise de Dados e Previsão
+
+A partir da análise dos dados climáticos e históricos, a aplicação calculará a previsão de produtividade das próximas safras. 
+
+### d) Visualização e Usabilidade
+
+Mesmo sendo via prompt, a aplicação exibirá os dados de forma clara e organizada, permitindo fácil leitura e interpretação. Poderá ser gerada uma tabela mostrando as previsões de safra para diferentes culturas e períodos.
 
 
 ## 📁 Estrutura de pastas
