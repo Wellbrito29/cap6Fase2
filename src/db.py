@@ -1,3 +1,6 @@
+import pandas as pd
+
+
 # db.py
 def criar_tabela(conn):
     try:
@@ -32,7 +35,10 @@ def criar_tabela(conn):
 
 
 def inserir_dados(conn, data_hora, temperatura, precipitacao):
+    print("Aguarde inserindo dados no banco de dados!")
+
     try:
+
         cursor = conn.cursor()
         cursor.execute(
             """
@@ -42,7 +48,6 @@ def inserir_dados(conn, data_hora, temperatura, precipitacao):
             (data_hora, temperatura, precipitacao),
         )
         conn.commit()
-        print("Dados inseridos com sucesso!")
     except Exception as e:
         print("Erro ao inserir dados:", e)
 
@@ -61,5 +66,20 @@ def consultar_dados(conn):
             )
     except Exception as e:
         print("Erro ao consultar dados:", e)
-    finally:
-        cursor.close()
+
+
+def converter_dados(conn):
+    try:
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM dados_climaticos")
+        dados = cursor.fetchall()
+
+        # Transformar os dados em um DataFrame do pandas
+        df = pd.DataFrame(
+            dados, columns=["id", "data_hora", "temperatura", "precipitacao"]
+        )
+
+        return df
+    except Exception as e:
+        print("Erro ao consultar dados:", e)
+        return None
