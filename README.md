@@ -11,11 +11,11 @@
 ## Nome do grupo
 
 ## 👨‍🎓 Integrantes: 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 1</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 2</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 3</a> 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 4</a> 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 5</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">WELLIGTON NASCIMENTO DE BRITO -RM 552157</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">CELESTE LEITE DOS SANTOS - RM 559312</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">EDUARDO CARVALHO - RM 95585</a> 
+- <a href="https://www.linkedin.com/company/inova-fusca">LUMA SANTOS DE OLIVEIRA - RM 560146</a> 
+- <a href="https://www.linkedin.com/company/inova-fusca"> RICARDO ARAÚJO DE OLIVEIRA - RM 561182</a>
 
 ## 👩‍🏫 Professores:
 ### Tutor(a) 
@@ -26,7 +26,7 @@
 
 ## 📜 Descrição
 
-A solução visa prever a produtividade das safras agrícolas com base em fatores climáticos e dados históricos, auxiliando agricultores e gestores a tomarem decisões mais informadas. O desafio é combinar dados climáticos (chuva, temperatura, umidade) com dados históricos de produção para gerar previsões de safra em diferentes regiões.
+A solução visa prever a influência da temperatura e precipitação no rendimento da colheita de cana-de-açúcar.
 
 ## 2. Como a Solução Vai Resolver o Problema?
 
@@ -34,19 +34,20 @@ A aplicação será dividida nas seguintes etapas:
 
 ### a) Coleta de Dados Climáticos em Tempo Real
 
-A solução irá coletar dados climáticos (chuva, temperatura, umidade, etc.) de APIs públicas como Open Meteo, ou usando dados meteorológicos disponíveis no banco de dados.
+A solução irá coletar dados climáticos (temperatura, precipitação, etc.) de APIs públicas como Open Meteo, e armazenar esses dados em um banco de dados Oracle.
 
-### b) Armazenamento e Consulta de Dados Históricos
+### b) Armazenamento e Consulta de Dados Climáticos
 
-Dados históricos de produtividade agrícola (safras passadas) serão armazenados em um banco de dados Oracle. A solução permitirá a consulta e atualização desses dados para manter o histórico atualizado.
+Os dados climáticos coletados serão armazenados em um banco de dados Oracle, permitindo fácil consulta e atualização.
 
 ### c) Análise de Dados e Previsão
 
-A partir da análise dos dados climáticos e históricos, a aplicação calculará a previsão de produtividade das próximas safras. 
+A partir da análise dos dados climáticos, a aplicação calculará o impacto da temperatura e precipitação no rendimento da colheita de cana-de-açúcar utilizando um modelo de regressão linear. A aplicação gerará gráficos que mostrarão a relação entre as variáveis climáticas e o rendimento da cana.
 
 ### d) Visualização e Usabilidade
 
-Mesmo sendo via prompt, a aplicação exibirá os dados de forma clara e organizada, permitindo fácil leitura e interpretação. Poderá ser gerada uma tabela mostrando as previsões de safra para diferentes culturas e períodos.
+Mesmo sendo via prompt, a aplicação exibirá os dados de forma clara e organizada, permitindo fácil leitura e interpretação. Gráficos serão gerados para ilustrar as previsões de rendimento com base nas condições climáticas simuladas.
+
 
 
 ## 📁 Estrutura de pastas
